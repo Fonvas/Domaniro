@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Domaniro — See domain strength before you click</title>
+
+<meta
+  name="description"
+  content="See Domain Score, Global Rank, and Referring Domains instantly on any website and directly in Google and Bing search results."
+/>
+
+<link rel="icon" type="image/png" href="assets/icon128.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+
+<header class="site-header">
+  <div class="wrap header-inner">
+
+    <a href="#" class="brand">
+      <img src="assets/icon48.png" alt="" width="24" height="24" />
+      <span>Domaniro</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Free &amp; Pro</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#install" class="btn btn-primary btn-small">
+      Add to Chrome
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+
+  <!-- ============ HERO ============ -->
+
+  <section class="hero">
+
+    <div class="wrap hero-inner">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          Chrome extension · free
+        </p>
+
+        <h1>
+          Know how strong a domain is<br />
+          before you click.
+        </h1>
+
+        <p class="hero-sub">
+          See Domain Score, Global Rank, and Referring Domains instantly
+          on any website — and directly beside Google and Bing search results.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#install" class="btn btn-primary btn-large">
+            <img src="assets/icon16.png" alt="" width="16" height="16" />
+            Add to Chrome — free
+          </a>
+
+          <span class="hero-note">
+            Works instantly. No account required.
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-demo">
+
+        <div class="demo-card">
+
+          <div class="demo-card-header">
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+
+            <span class="demo-url">
+              google.com/search?q=best+coffee+maker
+            </span>
+          </div>
+
+
+          <div class="demo-toggle-row">
+
+            <span class="demo-toggle-label">
+              Domain scores
+            </span>
+
+            <label class="toggle-switch">
+              <input type="checkbox" id="demo-toggle" checked />
+              <span class="toggle-slider"></span>
+            </label>
+
+          </div>
+
+
+          <div class="demo-results" id="demo-results">
+
+
+            <div class="demo-result">
+
+              <div class="demo-result-text">
+
+                <cite>seriouseats.com</cite>
+
+                <h3>
+                  The Best Coffee Makers, Tested and Reviewed
+                </h3>
+
+                <p>
+                  We spent months testing coffee makers in our test kitchen
+                  to find the ones actually worth buying&hellip;
+                </p>
+
+              </div>
+
+              <span
+                class="da-badge"
+                data-band="high"
+                data-score="9.63"
+              >9.63</span>
+
+            </div>
+
+
+            <div class="demo-result">
+
+              <div class="demo-result-text">
+
+                <cite>coffeegearblog.example</cite>
+
+                <h3>
+                  10 Best Coffee Makers of 2026 &mdash; Buying Guide
+                </h3>
+
+                <p>
+                  Our picks for drip, pour-over, and espresso machines
+                  at every price point&hellip;
+                </p>
+
+              </div>
+
+              <span
+                class="da-badge"
+                data-band="mid"
+                data-score="5.21"
+              >5.21</span>
+
+            </div>
+
+
+            <div class="demo-result">
+
+              <div class="demo-result-text">
+
+                <cite>freshblog2026.example</cite>
+
+                <h3>
+                  Why I Switched to a French Press
+                </h3>
+
+                <p>
+                  A personal take on ditching the drip machine after
+                  ten years&hellip;
+                </p>
+
+              </div>
+
+              <span
+                class="da-badge"
+                data-band="low"
+                data-score="2.04"
+              >2.04</span>
+
+            </div>
+
+
+            <div class="demo-result">
+
+              <div class="demo-result-text">
+
+                <cite>brand-new-site.example</cite>
+
+                <h3>
+                  Top Coffee Maker Picks &mdash; Updated Weekly
+                </h3>
+
+                <p>
+                  Comparing the latest models so you don&rsquo;t have to&hellip;
+                </p>
+
+              </div>
+
+              <span
+                class="da-badge"
+                data-band="unknown"
+                data-score="–"
+              >–</span>
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <p class="demo-caption">
+          See the score directly in search results. No extra tab required.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ VALUE ============ -->
+
+  <section class="problem">
+
+    <div class="wrap">
+
+      <h2 class="section-kicker">
+        The domain metrics you need, right where you need them
+      </h2>
+
+      <p class="problem-lede">
+        Quickly gauge a website before you spend time reading it,
+        linking to it, or opening another SEO tool. Domaniro puts
+        essential domain metrics directly into your browsing workflow.
+      </p>
+
+
+      <div class="problem-grid">
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            3
+          </span>
+
+          <p>
+            essential metrics at a glance: Domain Score, Global Rank,
+            and Referring Domains
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            2
+          </span>
+
+          <p>
+            places to check: any website and every Google or Bing result
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            1×
+          </span>
+
+          <p>
+            simple workflow: search, see the metrics, keep browsing
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ HOW IT WORKS ============ -->
+
+  <section class="how" id="how">
+
+    <div class="wrap">
+
+      <h2 class="section-kicker">
+        How it works
+      </h2>
+
+      <p class="section-lead">
+        See the numbers without leaving the page.
+      </p>
+
+
+      <div class="how-grid">
+
+
+        <!-- Toolbar -->
+
+        <div class="how-panel">
+
+          <p class="how-panel-label">
+            Toolbar badge
+          </p>
+
+
+          <div class="mock-popup">
+
+
+            <div class="mock-popup-score">
+
+              <span class="mock-score-num">
+                9.63
+              </span>
+
+              <span class="mock-score-label">
+                Domain Score · github.com
+              </span>
+
+            </div>
+
+
+            <div class="mock-popup-stats">
+
+              <span>
+                #42 globally
+              </span>
+
+              <span class="dot">
+                ·
+              </span>
+
+              <span>
+                18.2k referring domains
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <p class="how-panel-copy">
+            Open any website and see its Domain Score, Global Rank,
+            and Referring Domains at a glance. The information is
+            available directly from the browser toolbar while you browse.
+          </p>
+
+        </div>
+
+
+
+        <!-- SERP -->
+
+        <div class="how-panel">
+
+          <p class="how-panel-label">
+            Search results overlay
+          </p>
+
+
+          <div class="mock-serp-mini">
+
+            <div class="mock-serp-row">
+              <span>example-a.com</span>
+
+              <span
+                class="da-badge"
+                data-band="high"
+                data-score="8.72"
+              >8.72</span>
+            </div>
+
+
+            <div class="mock-serp-row">
+              <span>example-b.com</span>
+
+              <span
+                class="da-badge"
+                data-band="mid"
+                data-score="4.36"
+              >4.36</span>
+            </div>
+
+
+            <div class="mock-serp-row">
+              <span>example-c.com</span>
+
+              <span
+                class="da-badge"
+                data-band="low"
+                data-score="1.82"
+              >1.82</span>
+            </div>
+
+          </div>
+
+
+          <p class="how-panel-copy">
+            See a Domain Score beside every organic result on Google
+            and Bing. Compare domains before opening another tab,
+            copying URLs, or running a separate lookup.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ METRICS ============ -->
+
+  <section class="problem">
+
+    <div class="wrap">
+
+      <h2 class="section-kicker">
+        Three numbers. A clearer picture.
+      </h2>
+
+      <p class="problem-lede">
+        Domaniro uses OpenPageRank data to give you a quick view
+        of a domain's strength and link presence across the web.
+      </p>
+
+
+      <div class="problem-grid">
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            9.63
+          </span>
+
+          <p>
+            <strong>Domain Score</strong><br />
+            A 0–10 PageRank-based score. Higher scores indicate
+            stronger link authority within the OpenPageRank web graph.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            #15
+          </span>
+
+          <p>
+            <strong>Global Rank</strong><br />
+            The domain's position in the OpenPageRank global ranking.
+            A smaller number represents a higher position.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <span class="problem-stat">
+            575K
+          </span>
+
+          <p>
+            <strong>Referring Domains</strong><br />
+            The number of distinct domains linking to the website.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ PRICING ============ -->
+
+  <section class="pricing" id="pricing">
+
+    <div class="wrap">
+
+      <h2 class="section-kicker">
+        Free &amp; Pro
+      </h2>
+
+      <p class="section-lead">
+        Start with the core metrics. Upgrade when you need to work
+        with domains in bulk.
+      </p>
+
+
+      <div class="plans">
+
+
+        <!-- Free -->
+
+        <section class="plan-card">
+
+          <div class="plan-header">
+
+            <h3>
+              Free
+            </h3>
+
+            <div class="plan-price">
+              $0
+              <span class="plan-price-note">
+                forever
+              </span>
+            </div>
+
+          </div>
+
+
+          <ul class="feature-list">
+
+            <li>
+              Domain Score on the websites you visit
+            </li>
+
+            <li>
+              Global Rank and Referring Domains
+            </li>
+
+            <li>
+              Domain Score badges on Google and Bing results
+            </li>
+
+            <li>
+              No account required
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        <!-- Pro -->
+
+        <section class="plan-card plan-card-pro">
+
+          <div class="plan-eyebrow">
+            One-time purchase
+          </div>
+
+
+          <div class="plan-header">
+
+            <h3>
+              Pro
+            </h3>
+
+            <div class="plan-price">
+              $9.90
+              <span class="plan-price-note">
+                once
+              </span>
+            </div>
+
+          </div>
+
+
+          <p class="plan-everything-in">
+            Everything in Free, plus:
+          </p>
+
+
+          <ul class="feature-list feature-list-pro">
+
+            <li>
+              Bulk-check up to 200 domains at once
+            </li>
+
+            <li>
+              Export bulk results to CSV
+            </li>
+
+            <li>
+              Export Rank and Referring Domain data
+            </li>
+
+            <li>
+              One-click CSV export from search results
+            </li>
+
+            <li>
+              One payment. Keep Pro forever.
+            </li>
+
+          </ul>
+
+
+          <a href="#install" class="btn btn-primary btn-block">
+            Get Pro
+          </a>
+
+        </section>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ TRUST ============ -->
+
+  <section class="trust">
+
+    <div class="wrap trust-inner">
+
+
+      <div class="trust-item">
+
+        <span class="trust-mark">
+          —
+        </span>
+
+        <h3>
+          No account required
+        </h3>
+
+        <p>
+          Install Domaniro and start checking domains immediately.
+          Pro uses a license key, keeping the purchase simple.
+        </p>
+
+      </div>
+
+
+      <div class="trust-item">
+
+        <span class="trust-mark">
+          —
+        </span>
+
+        <h3>
+          Built for quick checks
+        </h3>
+
+        <p>
+          Domaniro keeps domain metrics close to the pages and
+          search results you're already looking at.
+        </p>
+
+      </div>
+
+
+      <div class="trust-item">
+
+        <span class="trust-mark">
+          —
+        </span>
+
+        <h3>
+          Minimal data collection
+        </h3>
+
+        <p>
+          Domain lookups use the domain you're checking.
+          The extension does not need your page content or
+          browsing history to provide domain metrics.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ FAQ ============ -->
+
+  <section class="faq" id="faq">
+
+    <div class="wrap">
+
+      <h2 class="section-kicker">
+        Questions
+      </h2>
+
+
+      <div class="faq-list">
+
+
+        <details class="faq-item">
+
+          <summary>
+            Where does the Domain Score come from?
+          </summary>
+
+          <p>
+            Domaniro's Domain Score is based on OpenPageRank,
+            an open web-graph-based PageRank system. Domaniro
+            also displays OpenPageRank's Global Rank and
+            Referring Domains data.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What does the Domain Score tell me?
+          </summary>
+
+          <p>
+            Domain Score provides a quick way to gauge a domain's
+            strength within the OpenPageRank web graph. Higher
+            scores indicate stronger overall link authority within
+            that dataset.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is Global Rank?
+          </summary>
+
+          <p>
+            Global Rank shows the domain's position in the
+            OpenPageRank global ranking. A smaller rank number
+            represents a higher position.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What are Referring Domains?
+          </summary>
+
+          <p>
+            Referring Domains is the number of distinct domains
+            that link to a website. Multiple links from the same
+            domain count as one referring domain.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Does Pro auto-renew or bill monthly?
+          </summary>
+
+          <p>
+            Pro is a single one-time purchase. There is no recurring
+            subscription or monthly billing.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What data does Domaniro collect?
+          </summary>
+
+          <p>
+            Domaniro uses the domain of the page being checked
+            for a metric lookup. The extension does not need full
+            page content or browsing history to provide domain metrics.
+            See the full
+            <a href="privacy-policy.html">
+              privacy policy
+            </a>.
+          </p>
+
+        </details>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============ FINAL CTA ============ -->
+
+  <section class="final-cta" id="install">
+
+    <div class="wrap final-cta-inner">
+
+      <h2>
+        Search. See the score. Keep browsing.
+      </h2>
+
+      <a href="#" class="btn btn-primary btn-large">
+
+        <img
+          src="assets/icon16.png"
+          alt=""
+          width="16"
+          height="16"
+        />
+
+        Add to Chrome — free
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+  <div class="wrap footer-inner">
+
+
+    <div class="footer-brand">
+
+      <img
+        src="assets/icon48.png"
+        alt=""
+        width="20"
+        height="20"
+      />
+
+      <span>
+        Domaniro
+      </span>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="privacy-policy.html">
+        Privacy
+      </a>
+
+      <a href="#faq">
+        FAQ
+      </a>
+
+      <a href="mailto:fonvasdev@gmail.com">
+        Contact
+      </a>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
