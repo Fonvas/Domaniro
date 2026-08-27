@@ -1,2 +1,2 @@
-# Simple-DA-Checker
-Simple DA Checker Chrome extention landing page
+# Domaniro
+Domaniro Chrome extention landing page
