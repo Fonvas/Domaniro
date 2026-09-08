@@ -359,6 +359,11 @@ img { display: block; max-width: 100%; }
   font: 600 11px/1 var(--font-body);
 }
 
+.da-badge.demo-badge[data-band] {
+  background: transparent;
+  border-color: transparent;
+}
+
 .demo-badge-score {
   padding: 4px 7px;
   border: 1px solid transparent;
@@ -830,11 +835,24 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 14px 12px;
   border-bottom: 1px solid var(--surface);
   font-size: 14px;
   font-weight: 500;
   color: #1a0dab;
+}
+
+.mock-serp-row > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mock-serp-row .demo-badge {
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .mock-serp-row:last-child { border-bottom: none; }
