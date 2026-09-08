@@ -350,6 +350,76 @@ img { display: block; max-width: 100%; }
   text-align: center;
 }
 
+.demo-badge {
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: var(--ink-soft);
+  background: transparent;
+  font: 600 11px/1 var(--font-body);
+}
+
+.demo-badge-score {
+  padding: 4px 7px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.demo-badge[data-band="unknown"] .demo-badge-score {
+  color: var(--band-unknown-fg);
+  background: var(--band-unknown-bg);
+  border-style: dashed;
+  border-color: var(--band-unknown-border);
+}
+
+.demo-badge[data-band="low"] .demo-badge-score {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.demo-badge[data-band="mid"] .demo-badge-score {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.demo-badge[data-band="high"] .demo-badge-score {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.demo-badge-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--line);
+}
+
+.demo-badge-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.demo-badge-dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+}
+
+.demo-badge-rank-dot { background: #9aa0a6; }
+.demo-badge-referring-dot { background: #3b82f6; }
+
+@media (max-width: 620px) {
+  .demo-badge {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .demo-badge-divider { display: none; }
+}
+
 /* --- The actual badge component, byte-for-byte from
    content-scripts/serp-overlay.js's injected styles. This is not a
    separate "marketing" version — it's the real thing. --- */
@@ -395,6 +465,159 @@ img { display: block; max-width: 100%; }
   background: var(--band-high-bg);
   color: var(--band-high-fg);
   border-color: var(--band-high-border);
+}
+
+/* --- Domain checker widget, using the same metrics as the SERP badge --- */
+.domain-widget {
+  margin: 32px 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.domain-widget-label {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.domain-widget-row {
+  display: flex;
+  gap: 8px;
+}
+
+.domain-widget-row input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 12px;
+  color: var(--ink);
+  font: 14px/1.4 var(--font-body);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.domain-widget-row input:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+  border-color: var(--brand);
+}
+
+.domain-widget-row button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.domain-widget-error {
+  margin: 10px 0 0;
+  color: #b42318;
+  font-size: 13px;
+}
+
+.domain-widget-result {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(3, auto);
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.domain-widget-result-domain {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font: 600 14px/1.3 var(--font-mono);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.domain-widget-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+}
+
+.domain-widget-stat-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.domain-widget-stat-value {
+  color: var(--ink-soft);
+  font: 600 13px/1 var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.domain-widget-stat:first-of-type .domain-widget-stat-value {
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.domain-widget-stat:first-of-type .domain-widget-stat-value[data-band="unknown"] {
+  color: var(--band-unknown-fg);
+  background: var(--band-unknown-bg);
+  border-style: dashed;
+  border-color: var(--band-unknown-border);
+}
+
+.domain-widget-stat:first-of-type .domain-widget-stat-value[data-band="low"] {
+  color: #ffffff;
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.domain-widget-stat:first-of-type .domain-widget-stat-value[data-band="mid"] {
+  color: #ffffff;
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.domain-widget-stat:first-of-type .domain-widget-stat-value[data-band="high"] {
+  color: #ffffff;
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.domain-widget-stat:not(:first-of-type)::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.domain-widget-stat:last-child::before { background: #3b82f6; }
+
+@media (max-width: 620px) {
+  .domain-widget-result {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .domain-widget-result-domain {
+    grid-column: 1 / -1;
+  }
+
+  .domain-widget-stat {
+    padding-left: 0;
+    border-left: 0;
+  }
 }
 
 /* Toggled-off state, driven by JS adding .is-hidden to the results wrapper */
